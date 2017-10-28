@@ -50,22 +50,8 @@ int		exit_key(int key, t_env *env)
 {
 	(void)env;
 	(void)key;
-	exit(0);
-}
-
-void	music(int key)
-{
 	system("killall afplay");
-	if (key == ONE)
-		system("afplay music/Super_Mario_Bros.mp3&");
-	if (key == TWO)
-		system("afplay music/A_Ha_Take_On_Me.mp3&");
-	if (key == THREE)
-		system("afplay music/Kola_Kid_Press_Start.mp3&");
-	if (key == FOUR)
-		system("afplay music/Super_Mario_Bros_Remix.mp3&");
-	if (key == FIVE)
-		system("afplay music/Kola_Kid_2punk2suck.mp3&");
+	exit(0);
 }
 
 void	strafe(int key, t_env *env)

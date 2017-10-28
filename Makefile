@@ -1,4 +1,4 @@
-NAME		= Wolf3D
+NAME		= wolf3d
 
 RM			= rm -rf
 CC			= gcc

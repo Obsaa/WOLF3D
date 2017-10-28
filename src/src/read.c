@@ -12,36 +12,6 @@
 
 #include "../inc/wolf3d.h"
 
-void	read_map(t_env *env, int fd)
-{
-	char	*str;
-	int		num[4];
-	int		i;
-	char 	*tmp;
-
-	i = 0;
-	str = (char*)malloc(sizeof(char) * UINT_MAX);
-	tmp = str;
-	get_next_line(fd, &str);
-	while (*str)
-	{
-		if (*str == ' ')
-			str++;
-		else
-		{
-			num[i] = ft_atoi(str);
-			while (*str >= '0' && *str <= '9')
-				str++;
-			i++;
-		}
-	}
-	env->map.width = num[0];
-	env->map.len = num[1];
-	env->player.pos_x = (num[2] * SCALE) + (SCALE / 2);
-	env->player.pos_y = (num[3] * SCALE) + (SCALE / 2);
-	ft_strdel(&tmp);
-}
-
 void	store_map(t_env *env, int fd)
 {
 	char	**str;
